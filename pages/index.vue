@@ -1,6 +1,7 @@
 <script setup lang="ts">
 const list = reactive([])
-const {data} = await useFetch('https://jsonplaceholder.typicode.com/posts?_page=1&_limit=2')
+const config = useRuntimeConfig()
+const {data} = await useFetch(`${config.public.baseUrl}/posts?_page=1&_limit=20`)
 list.push(...data.value)
 </script>
 <template>
