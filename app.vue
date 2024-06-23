@@ -4,3 +4,7 @@
 
   </div>
 </template>
+<script>
+const {data} = useFetch('https://jsonplaceholder.typicode.com/todos')
+console.log('data=>',data.value)
+</script>
